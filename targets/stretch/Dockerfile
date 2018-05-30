@@ -12,4 +12,4 @@ ADD . /usr/src/builddir
 WORKDIR /usr/src/builddir
 
 RUN uscan --download-current-version
-RUN cd ../${PACKAGE_NAME}-* && dpkg-buildpackage > /dev/null
+RUN cd "$(find .. -type d -name ${PACKAGE_NAME}-\*)" && dpkg-buildpackage > /dev/null
