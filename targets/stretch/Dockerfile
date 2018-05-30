@@ -11,5 +11,5 @@ RUN mk-build-deps --install --tool 'apt-get -y -qq' --remove /root/control && rm
 ADD . /usr/src/builddir
 WORKDIR /usr/src/builddir
 
-RUN uscan --download-current-version
+RUN uscan --download-current-version --pasv
 RUN cd ../${PACKAGE_NAME}-* && dpkg-buildpackage > /dev/null
