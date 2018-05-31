@@ -29,6 +29,6 @@ for folder in targets/*; do
       -T "${deb}" \
       -u "${BINTRAY_USER}:${BINTRAY_API_KEY}" \
       -f \
-      "https://api.bintray.com/content/${BINTRAY_PROJECT}/${tags[0]}/${tags[1]}/debian/${paths[1]}/${filename};deb_distribution=${paths[1]};deb_component=main;deb_architecture=${tags[2]};publish=1"
+      "https://api.bintray.com/content/${BINTRAY_PROJECT}/${tags[0]}/${tags[1]}/debian/${paths[1]}/${filename};deb_distribution=${paths[1]};deb_component=main;deb_architecture=${tags[2]};publish=1;override=1"
   done
 done
